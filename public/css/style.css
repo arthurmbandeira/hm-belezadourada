@@ -23,23 +23,45 @@ h1, h2, h3, h4, h5, h6{
 	transform: scale(1.1);
 
 }
-#services .img-servicos img{
-	border-radius: 50%;
-}
 #team img{
 	max-height: 150px;
 }
-
 .transition-padrao{
 	-webkit-transition:all 0.3s ease;
 	-moz-transition:all 0.3s ease;
 	-o-transition:all 0.3s ease;
 	transition:all 0.3s ease;
 }
-
 .transition-padrao:hover{
 	-webkit-transition:all 0.3s ease;
 	-moz-transition:all 0.3s ease;
 	-o-transition:all 0.3s ease;
 	transition:all 0.3s ease;
+}
+#espaco .carousel{
+	height: 500px;
+}
+#espaco .carousel .carousel-item{
+	width: 400px;
+}
+#espaco .carousel .carousel-item .fancybox{
+	visibility: hidden;
+}
+#espaco .carousel .carousel-item .fancybox img{
+	width: 100%;
+}
+#contact{
+	padding: 50px 0;
+}
+footer.page-footer{
+	padding-top: 1rem;
+}
+footer ul{
+	display: inline-flex;
+}
+footer ul li{
+	margin: 0 10px;
+}
+footer ul li:first-of-type{
+	margin-left: 0;
 }

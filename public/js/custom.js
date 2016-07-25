@@ -73,22 +73,7 @@ $('#filters').on( 'click', 'a', function() {
   var filterValue = $(this).attr('data-filter');
   $container.isotope({ filter: filterValue });
 
-});
-
-// Count Down
-$('#clock').countdown('5/17/2016 00:00:00 UTC', function(event) {
-  $(this).html(event.strftime('%D<span>Days</span>  %H:%M:%S'));
-});
-
-// Load More 
-$('.load-more a').on('click', function() {
-  $(this).find('i').addClass('fa-spin active');
-  setTimeout(function(){
-    $('.load-more a i').removeClass('fa-spin active');
-    $('.load-more').html('<span class="pink-text accent-2 wow zoomIn">Finished, There is no more...</span>');
-  },1500);
-});
- 
+}); 
 
 // Lazy initialize
 $("img.lazy").lazyload({
@@ -106,32 +91,6 @@ $("img.lazy").lazyload({
   }
 });
 
-// Charts Function
-function pie_chart() {
-  
-  if (typeof $.fn.easyPieChart !== 'undefined') {
-  
-    $(".pie-chart:in-viewport").each(function() {
-      
-      $(this).easyPieChart({
-        animate: 1500,
-        lineCap: "square",
-        lineWidth: $(this).attr("data-line-width"),
-        size: $(this).attr("data-size"),
-        barColor: $(this).attr("data-bar-color"),
-        trackColor: $(this).attr("data-track-color"),
-        scaleColor: "transparent",
-        onStep: function(from, to, percent) {
-          $(this.el).find(".pie-chart-details .value").text(Math.round(percent));
-        }
-      });
-      
-    });
-    
-  }
-  
-}
-
 // wow lib init 
 new WOW().init();
 
@@ -139,20 +98,7 @@ new WOW().init();
 $(window).scroll(function() {
   // Stiky
   stickyNav();
-
-  // Chart
-  pie_chart();
-  
-  // start count 
-  $('#facts').each(function(){
-    var itemPos = $(this).offset().top;
-    var topOfWindow = $(window).scrollTop();
-    var time = $('.timer').text();
-
-    if (itemPos < topOfWindow+400) 
-      if(time == '' || time == '0')
-        $('.timer').each(count);
-  });
+  $('#logo').height($('header nav').height());
 });
 
 // On Window Load
@@ -164,57 +110,26 @@ $(window).load(function() {
 
 });
 
+$(window).resize(function(){
+  $('.portfolio .item .imgLiquid').height($('.portfolio .item').width());
+  $('#logo').height($('header nav').height());
+});
+
 // On Document Ready
 $(document).ready(function(){
   // Stiky
   stickyNav();
 
-  // Chart
-  pie_chart();
+  $('.imgLiquid').imgLiquid();
+  
+  $('.portfolio .item .imgLiquid').height($('.portfolio .items-list .item').width());
 
-  // Tweet
-  $.ajax({
-    url: 'php/get_tweets.php',
-    type: 'GET',
-    success: function(response) {
+  $('#logo').height($('header nav').height());
 
-      if (typeof response.errors === 'undefined' || response.errors.length < 1) {
-        
-        var $tweets = $('<div class="tweetfeed"></div>');
-        console.log(response);
-        $.each(response, function(i, obj) {
-          var created_at = obj.created_at.split('+');
-          $tweets.append('<div class="tweet"><div class="tweet-content z-depth-1"><a target="_blank" href="http://twitter.com/' + obj.user.name +'">'+ obj.user.name +'</a> ' + obj.text + '</div><div class="tweet-date"><i class="mdi-device-access-time"></i>' + created_at[0] + '</div></div>');
-        });
-
-        $('.tweetfeed').html($tweets);
-
-        var divs = $('.tweetfeed .tweet'),interval, current = jQuery(divs[0]);
-        var cycle = function(){
-          var prev = current;   
-          current = current.next();
-          if (current.length == 0){
-            current = jQuery(divs[0]);
-          }    
-          prev.fadeOut(function(){
-            current.fadeIn(); 
-          });
-        }
-        interval = window.setInterval(cycle, 6000);  
-
-      } else {
-        $('.tweetfeed p:first').text('Response error');
-      }
-    },
-    error: function(errors) {
-      $('.tweetfeed p:first').text('Request error');
-    }
+  $('.carousel').carousel({
+    time_constant: 0,
+    indicators: true,
   });
-
-
-  // Comment Time Line 
-  var h = $('.comment-time-line').height();
-  $('.comment-time-line .v-line').height(h);
 
   // Fancybox
   $('.fancybox').fancybox({
@@ -274,39 +189,21 @@ $(document).ready(function(){
 // Send Message 
 $('.send-message').on('submit', function(e) {
   e.preventDefault();
-  var your_name = $(this).find("input[name='your_name']").val();
-  var your_email = $(this).find("input[name='your_email']").val();
-  var your_job = $(this).find("input[name='your_job']").val();
-  var your_message = $(this).find("textarea[name='your_message']").val();
-  if( your_name != '' && your_email != '' && your_message!= '' ) {
+  var nome = $(this).find("input[name='nome']").val();
+  var email = $(this).find("input[name='email']").val();
+  var telefone = $(this).find("input[name='telefone']").val();
+  var mensagem = $(this).find("textarea[name='mensagem']").val();
+  if( nome != '' && email != '' && mensagem!= '' ) {
     $.ajax({
-      url: "php/send_message.php",  
-      type: 'POST',
-      data: { your_name: your_name, your_email: your_email, your_job: your_job, your_message: your_message },
-      dataType: "json",
       success: function(data) {
-        Materialize.toast('Your Message has been Sent Successfully', 4000);
+        Materialize.toast('Sua mensagem foi enviada!', 4000);
       }
     });
   } else {
-    Materialize.toast('Fill all the required fields', 4000);
+    Materialize.toast('Todos os campos são obrigatórios', 4000);
   }
 });
 
-
-// Subscrip
-$('#mc-embedded-subscribe-form').on('submit', function(e) {
-  var your_email = $(this).find("input[name='EMAIL']").val();
-  if( your_email == '' ) {
-    e.preventDefault();
-    Materialize.toast('Enter Your Email', 4000);
-  } 
-});
-// Google analytics
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-75079627-1', 'auto');
-ga('send', 'pageview');
+function scrollCustom(id){
+  $('html, body').animate({scrollTop:$('#' + id).offset().top - 48}, 'slow');
+}

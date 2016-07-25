@@ -1,0 +1,13 @@
+.follow-btn a:hover i.fa-facebook	{background: #4551e3}
+.follow-btn a:hover i.fa-twitter	{background: #2a9dff}
+.follow-btn a:hover i.fa-linkedin	{background: #2a72ff}
+.follow-btn a:hover i.fa-dribbble	{background: #f26798}
+.follow-btn a:hover i.fa-behance	{background: #008eff}
+.follow-btn a:hover i.fa-instagram	{background: #306088}
+.follow-btn a:hover i.fa-youtube	{background: #e72424}
+.follow-btn a:hover i.fa-google-plus	{background: #E03E2A}
+.follow-btn a:hover i.fa-rss	{background: #ffa42a}
+.follow-btn a:active i{
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}

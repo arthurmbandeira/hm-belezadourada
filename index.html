@@ -1,1 +1,623 @@
-Hello World!
+<!DOCTYPE html>
+<html class="no-js" lang="en-US"><!--<![endif]--><!-- the "no-js" class is for Modernizr. -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Materiable - Material Design Theme</title>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<!-- MOBILE STATUS BAR COLOR -->
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#303f9f">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#303f9f">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<!-- FAVICON -->
+	<link href="/img/favicon.png" rel="icon">
+	<link href="/img/favicon@2x.png" rel="icon">
+	<link href="/img/iphone-favicon.png" rel="apple-touch-icon">
+	<link href="/img/iphone-favicon@2x.png" rel="apple-touch-icon" sizes="76x76">
+	<link href="/img/ipad-favicon.png" rel="apple-touch-icon" sizes="120x120">
+	<link href="/img/ipad-favicon@2x.png" rel="apple-touch-icon" sizes="152x152">
+
+	<!-- MATERIALIZE CSS -->
+	<link type="text/css" rel="stylesheet" href="/belezadourada/public/css/materialize.min.css" media="screen,projection">
+
+	<!-- FONTAWESOME -->
+	<link type="text/css" rel="stylesheet" href="/belezadourada/public/css/font-awesome/css/font-awesome.min.css" media="screen,projection">
+
+	<!-- MATERIAL ICONS -->
+	<link type="text/css" rel="stylesheet" href="/belezadourada/public/css/icon.css">
+
+	<!-- SWIPER SLIDER -->
+	<link type="text/css" rel="stylesheet" href="/belezadourada/public/css/swiper.min.css">
+
+	<!-- ANIMATIONS -->
+	<link type="text/css" rel="stylesheet" href="/belezadourada/public/css/animate.css" media="screen,projection">
+
+	<!-- FOTORAMA CAROUSEL -->
+	<link type="text/css" rel="stylesheet" href="/belezadourada/public/css/fotorama.css" media="screen,projection">
+
+	<!-- FANCYBOX -->
+	<link type="text/css" rel="stylesheet" href="/belezadourada/public/css/jquery.fancybox.css" media="screen,projection">
+
+	<!-- CUSTOM & SOCIAL BTN STYLE -->
+	<link type="text/css" rel="stylesheet" href="/belezadourada/public/css/social-btn.css" media="screen,projection">
+	<link type="text/css" rel="stylesheet" href="/belezadourada/public/css/custom.css" media="screen,projection">
+
+	<link type="text/css" rel="stylesheet" href="/belezadourada/public/css/style.css" media="screen,projection">
+
+	<!-- YOUR STYLE -->
+	<link type="text/css" rel="stylesheet" href="/belezadourada/public/saved_resource">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+	<style type="text/css"></style>
+	<style type="text/css">.fancybox-margin{margin-right:17px;}</style>
+	<script type="text/javascript" charset="UTF-8" src="/belezadourada/public/js/common.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="/belezadourada/public/js/util.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="/belezadourada/public/js/stats.js"></script>
+</head>
+<body>
+	<!-- Overlay -->
+	<div class="overlay" style="display: none;">
+		<div class="col s12 m12 center">
+			<div class="preloader-wrapper big active">
+				<div class="spinner-layer spinner-pink-only">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="gap-patch">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Header -->
+	<header>
+		<!-- Navbar Container -->
+		<div class="navbar-fixed">
+			<!-- nav -->
+			<nav class="" style="background-color:#A8DCD1">
+				<div class="container">
+					<div class="nav-wrapper">
+						<a href="/belezadourada" class="brand-logo">Beleza Dourada</a>
+						<a href="javscript:void(0)" data-activates="mobile-nav" class="button-collapse">
+							<i class="material-icons">menu</i>
+						</a>
+						<ul class="left hide-on-med-and-down">
+							<li class="active">
+								<a class="" href="" data-activates="home">Home</a>
+							</li>
+							<li>
+								<a class="" href="" data-activates="pages">Serviços</a>
+							</li>
+							<li>
+								<a class="" href="" data-activates="portfolio">Portfolio</a>
+							</li>
+							<li>
+								<a class="" href="" data-activates="elements">Equipe</a>
+							</li>
+							<li>
+								<a class="" href="" data-activates="blog">Espaço</a>
+							</li>
+							<li>
+								<a class="" href="" data-activates="elements">Depoimentos</a>
+							</li>
+							<li>
+								<a class="" href="" data-activates="contacts">Contato</a>
+							</li>
+						</ul>
+						<!-- Small Screen Side Nav -->
+						<ul id="mobile-nav" class="side-nav" style="left: -250px;">
+							<li><a class="active" href="http://materiable.toriom.com/index.html">Home</a></li>
+							<li class="divider"></li>
+							<li><a href="http://materiable.toriom.com/about.html">About us</a></li>
+							<li class="divider"></li>
+							<li><a href="http://materiable.toriom.com/blog-left-sidebar.html">Blog Left Sidebar</a></li>
+							<li class="divider"></li>
+							<li><a href="http://materiable.toriom.com/single-post-sidebar.html">Single Post Sidebar</a></li>
+							<li class="divider"></li>
+							<li><a href="http://materiable.toriom.com/portfolio-two-col.html">Portfolio Two Col</a></li>
+							<li class="divider"></li>
+							<li><a href="http://materiable.toriom.com/element-typography.html">Material Typography</a></li>
+							<li class="divider"></li>
+							<li><a href="http://materiable.toriom.com/contact.html">Contact 1</a></li>
+						</ul>
+						<!--/ Small Screen Side Nav -->
+					</div>
+					<!-- <form class="hide-on-med-and-down">
+						<div class="input-field">
+							<input id="search" type="search" required="">
+							<label for="search" class="search-label">
+								<i class="material-icons">search</i>
+							</label>
+							<i class="material-icons">close</i>
+						</div>
+					</form> -->
+				</div>
+			</nav>
+			<!--/ nav -->
+		</div>
+		<!--/ Navbar Container -->
+	</header>        
+	<!--/ Header -->
+
+	<!-- Slider -->
+	<div class="section slider-section">
+		<!-- Slider main container -->
+		<div class="swiper-container slider fullscreen">
+			<!-- Additional required wrapper -->
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide" style="background-image:url('/belezadourada/public/img/banner2.jpg')">
+					<div class="caption">
+						<!-- <h5 class="subtitle" data-swiper-parallax="-200">Clean, unique and modern design</h5> -->
+						<h3 class="title" data-swiper-parallax="-100">Beleza Dourada</h3>
+						<img class="responsive-img" data-swiper-parallax="-200" src="/belezadourada/public/img/logo1.png">
+					</div>
+				</div><!-- 
+				<div class="swiper-slide" style="background-image:url('img/slider/02.jpg')">
+					<div class="caption left-align">
+						<h3 class="title" data-swiper-parallax="-100">Materiable is a Pixel Perfect</h3>
+						<h5 class="subtitle" data-swiper-parallax="-200">Designed Based on Material Design</h5>
+						<div class="text" data-swiper-parallax="-300">
+							<p class="slider-btn">
+								<a href='https://www.google.com/design/spec/material-design/introduction.html' target="_blank" class="waves-effect waves-light btn indigo lighten-1">What is Material Design?</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide" style="background-image:url('img/slider/03.jpg')">
+					<div class="caption">
+						<h3 class="title" data-swiper-parallax="-100">Creative design</h3>
+						<h5 class="subtitle" data-swiper-parallax="-200">Inspired by the latest trends of Material design</h5>
+						<div class="text" data-swiper-parallax="-300">
+							<p class="slider-btn">
+								<a href='#!' class="waves-effect waves-light btn blue">Buy Theme</a> 
+								<a href='about.html' class="waves-effect waves-light btn indigo lighten-1">About Us</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide" style="background-image:url('img/slider/04.jpg')">
+					<div class="caption">
+						<h3 class="title" data-swiper-parallax="-100">Easily customizable</h3>
+						<h5 class="subtitle" data-swiper-parallax="-200">Can customize the elements to fit your needs</h5>
+					</div>
+				</div> -->
+			</div>
+			<!-- pagination -->
+			<div class="swiper-pagination"></div>
+
+			<!-- navigation buttons -->
+			<div class="swiper-button-prev swiper-button-white"></div>
+			<div class="swiper-button-next swiper-button-white"></div>
+		</div>
+	</div>
+	<!--/ Slider -->
+
+	<!-- Our Services Section -->
+	<div class="section z-depth-1" id="services">
+		<div class="container">
+			<h4 class="center titulo-section">Nossos Serviços</h4>
+			<p class="center">Lorem ipsum dolor sit amet, consecteturadi <br> piscing elit, sed do eiusmod tempor</p>
+			<!--   Icon Section   -->
+			<div class="row">
+				<div class="item-servicos transition-padrao col s12 wow slideInLeft" style="visibility: visible; animation-name: slideInLeft;">
+					<div class="icon-block">
+						<div class="img-servicos center light-blue-text">
+							<img class="responsive-img" src="/belezadourada/public/img/servico1.jpg">
+						</div>
+						<h5 class="center">Eventos</h5>
+					</div>
+				</div>
+
+				<div class="item-servicos transition-padrao col s12 wow zoomIn" style="visibility: visible; animation-name: zoomIn;">
+					<div class="icon-block">
+						<div class="img-servicos center light-blue-text">
+							<img class="responsive-img" src="/belezadourada/public/img/servico2.jpg">
+						</div>
+						<h5 class="center">Maquiagem</h5>
+					</div>
+				</div>
+
+				<div class="item-servicos transition-padrao col s12 wow slideInRight" style="visibility: visible; animation-name: zoomIn;">
+					<div class="icon-block">
+						<div class="img-servicos center light-blue-text">
+							<img class="responsive-img" src="/belezadourada/public/img/servico3.jpg">
+						</div>
+						<h5 class="center">Penteados</h5>
+					</div>
+				</div>
+
+				<div class="item-servicos transition-padrao col s12 wow slideInRight" style="visibility: visible; animation-name: slideInRight;">
+					<div class="icon-block">
+						<div class="img-servicos center light-blue-text">
+							<img class="responsive-img" src="/belezadourada/public/img/servico4.jpg">
+						</div>
+						<h5 class="center">Cursos</h5>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!--/ Our Services Section -->
+
+	<!-- Last Portfolio Section -->
+	<div class="section z-depth-1" id="last_portfolio">
+		<div class="container portfolio">
+			<h4 class="center grey-text text-lighten-2">Portfolio</h4>
+			<p class="center grey-text text-lighten-1">Lorem ipsum dolor sit amet, consecteturadi <br> piscing elit, sed do eiusmod tempor</p>
+			<!-- Filters -->
+			<div class="row">
+				<div class="col s8 offset-s2 ">
+					<ul class="tabs" id="filters" style="width: 100%;">
+						<li class="tab col s3">
+							<a class="grey-text text-lighten-1 active" href="/belezadourada/public/saved_resource" data-filter="*">Tudo</a>
+						</li>
+						<li class="tab col s3">
+							<a class="grey-text text-lighten-1" href="/belezadourada/public/saved_resource" data-filter=".ui-design">Eventos</a>
+						</li>
+						<li class="tab col s3">
+							<a class="grey-text text-lighten-1" href="/belezadourada/public/saved_resource" data-filter=".web-desgin">Maquiagem</a>
+						</li>
+						<li class="tab col s3">
+							<a class="grey-text text-lighten-1" href="/belezadourada/public/saved_resource" data-filter=".logo-design">Penteados</a>
+						</li>
+						<li class="tab col s3">
+							<a class="grey-text text-lighten-1" href="/belezadourada/public/saved_resource" data-filter=".ui-design">Cursos</a>
+						</li>
+						<div class="indicator" style="right: 635px; left: 0px;"></div>
+					</ul>
+				</div>
+			</div>
+			<!-- Portfolio Item -->
+			<div class="row items-list" style="position: relative; height: 652px;">
+				<div class="col s12 m3 left wow zoomIn web-desgin logo-design" style="visibility: visible; animation-name: zoomIn; position: absolute; left: 0px; top: 0px;">
+					<div class="item">
+						<img src="./public/01(1).jpg" class="responsive-img lazy">
+						<div class="caption center">
+							<h4>Portfolio Title</h4>
+							<p>Portfolio Description</p>
+							<a class="tooltipped zoon-in fancybox" data-position="bottom" data-delay="50" data-tooltip="Zoom in" data-fancybox-group="gallery" title="Portfolio Title" href="./public/01(1).jpg" data-tooltip-id="ee686d36-ed02-3482-b2eb-f6e87887f0f4">
+								<i class="fa fa-expand"></i>
+							</a>
+							<a class="tooltipped link" data-position="bottom" data-delay="0" data-tooltip="Share it" href="http://materiable.toriom.com/#!" data-tooltip-id="2cc454f6-2be6-5897-7bc9-82d42acdcbc6">
+								<i class="fa fa-share"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m3 left wow zoomIn web-desgin ui-design" style="visibility: visible; animation-name: zoomIn; position: absolute; left: 325px; top: 0px;">
+					<div class="item">
+						<img src="./public/02(1).jpg" class="responsive-img lazy">
+						<div class="caption center">
+							<h4>Portfolio Title</h4>
+							<p>Portfolio Description</p>
+							<a class="tooltipped zoon-in fancybox" data-position="bottom" data-delay="50" data-tooltip="Zoom in" data-fancybox-group="gallery" title="Portfolio Title" href="./public/02(1).jpg" data-tooltip-id="dff2d627-808c-b1a5-ee21-7e1f10fe12dd">
+								<i class="fa fa-expand"></i>
+							</a>
+							<a class="tooltipped link" data-position="bottom" data-delay="0" data-tooltip="Share it" href="http://materiable.toriom.com/#!" data-tooltip-id="be521fa2-8dcd-6ae1-ad55-40056f4a5c76">
+								<i class="fa fa-share"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m3 left wow zoomIn logo-design ui-design" style="visibility: visible; animation-name: zoomIn; position: absolute; left: 651px; top: 0px;">
+					<div class="item">
+						<img src="./public/03(1).jpg" class="responsive-img lazy">
+						<div class="caption center">
+							<h4>Portfolio Title</h4>
+							<p>Portfolio Description</p>
+							<a class="tooltipped zoon-in fancybox" data-position="bottom" data-delay="50" data-tooltip="Zoom in" data-fancybox-group="gallery" title="Portfolio Title" href="./public/03(1).jpg" data-tooltip-id="f401a292-d957-6a39-6e5b-b62361161509">
+								<i class="fa fa-expand"></i>
+							</a>
+							<a class="tooltipped link" data-position="bottom" data-delay="0" data-tooltip="Share it" href="http://materiable.toriom.com/#!" data-tooltip-id="b78d0c95-d9e0-0986-9dfd-c85f635b71f2">
+								<i class="fa fa-share"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m3 left wow zoomIn web-desgin ui-design" style="visibility: visible; animation-name: zoomIn; position: absolute; left: 976px; top: 0px;">
+					<div class="item">
+						<img src="./public/04(1).jpg" class="responsive-img lazy">
+						<div class="caption center">
+							<h4>Portfolio Title</h4>
+							<p>Portfolio Description</p>
+							<a class="tooltipped zoon-in fancybox" data-position="bottom" data-delay="50" data-tooltip="Zoom in" data-fancybox-group="gallery" title="Portfolio Title" href="./public/04(1).jpg" data-tooltip-id="72000cf5-24f6-7eb7-72e4-f3f22a7e9002">
+								<i class="fa fa-expand"></i>
+							</a>
+							<a class="tooltipped link" data-position="bottom" data-delay="0" data-tooltip="Share it" href="http://materiable.toriom.com/#!" data-tooltip-id="1093fd1f-505b-a56b-8ec3-b817d69e9109">
+								<i class="fa fa-share"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m3 left wow zoomIn logo-design ui-design" style="visibility: visible; animation-name: zoomIn; position: absolute; left: 0px; top: 326px;">
+					<div class="item">
+						<img src="./public/05(1).jpg" class="responsive-img lazy">
+						<div class="caption center">
+							<h4>Portfolio Title</h4>
+							<p>Portfolio Description</p>
+							<a class="tooltipped zoon-in fancybox" data-position="bottom" data-delay="50" data-tooltip="Zoom in" data-fancybox-group="gallery" title="Portfolio Title" href="./public/05(1).jpg" data-tooltip-id="3fda9768-f7be-09b1-384a-217645c1522f">
+								<i class="fa fa-expand"></i>
+							</a>
+							<a class="tooltipped link" data-position="bottom" data-delay="0" data-tooltip="Share it" href="http://materiable.toriom.com/#!" data-tooltip-id="40867683-42dc-0c8b-0223-949e483209d5">
+								<i class="fa fa-share"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m3 left wow zoomIn web-desgin ui-design" style="visibility: visible; animation-name: zoomIn; position: absolute; left: 325px; top: 326px;">
+					<div class="item">
+						<img src="./public/06(1).jpg" class="responsive-img lazy">
+						<div class="caption center">
+							<h4>Portfolio Title</h4>
+							<p>Portfolio Description</p>
+							<a class="tooltipped zoon-in fancybox" data-position="bottom" data-delay="50" data-tooltip="Zoom in" data-fancybox-group="gallery" title="Portfolio Title" href="./public/06(1).jpg" data-tooltip-id="3d066fef-d365-2c7f-99fd-de874b5dd0d0">
+								<i class="fa fa-expand"></i>
+							</a>
+							<a class="tooltipped link" data-position="bottom" data-delay="0" data-tooltip="Share it" href="http://materiable.toriom.com/#!" data-tooltip-id="8aa3d513-0ce4-253c-75da-feb41f2bb02f">
+								<i class="fa fa-share"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m3 left wow zoomIn logo-design ui-design" style="visibility: visible; animation-name: zoomIn; position: absolute; left: 651px; top: 326px;">
+					<div class="item">
+						<img src="./public/07.jpg" class="responsive-img lazy">
+						<div class="caption center">
+							<h4>Portfolio Title</h4>
+							<p>Portfolio Description</p>
+							<a class="tooltipped zoon-in fancybox" data-position="bottom" data-delay="50" data-tooltip="Zoom in" data-fancybox-group="gallery" title="Portfolio Title" href="./public/07.jpg" data-tooltip-id="0106b3cd-d680-6b3b-d7bf-14e0a63a3400">
+								<i class="fa fa-expand"></i>
+							</a>
+							<a class="tooltipped link" data-position="bottom" data-delay="0" data-tooltip="Share it" href="http://materiable.toriom.com/#!" data-tooltip-id="1df7847a-710d-6aaf-8ed3-17ce7dc812ff">
+								<i class="fa fa-share"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m3 left wow zoomIn web-desgin ui-design" style="visibility: visible; animation-name: zoomIn; position: absolute; left: 976px; top: 326px;">
+					<div class="item">
+						<img src="./public/08.jpg" class="responsive-img lazy">
+						<div class="caption center">
+							<h4>Portfolio Title</h4>
+							<p>Portfolio Description</p>
+							<a class="tooltipped zoon-in fancybox" data-position="bottom" data-delay="50" data-tooltip="Zoom in" data-fancybox-group="gallery" title="Portfolio Title" href="./public/08.jpg" data-tooltip-id="b87bd9ff-6c34-8be3-4a64-14ef11d5906c">
+								<i class="fa fa-expand"></i>
+							</a>
+							<a class="tooltipped link" data-position="bottom" data-delay="0" data-tooltip="Share it" href="http://materiable.toriom.com/#!" data-tooltip-id="e3852546-1695-147a-070d-b541d0d6c239">
+								<i class="fa fa-share"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ Portfolio Item -->
+
+			<div class="center">
+				<a href="http://materiable.toriom.com/portfolio-two-col.html" class="waves-effect waves-light btn pink accent-2">Our Portfolio</a>
+			</div>
+		</div>
+	</div>
+	<!--/ Last Portfolio Section -->
+
+	<!-- Our Team Section -->
+	<div class="section z-depth-1" id="team">
+		<div class="container">
+			<h4 class="center">Equipe</h4>
+			<p class="center">Lorem ipsum dolor sit amet, consecteturadi <br> piscing elit, sed do eiusmod tempor</p>
+
+			<!-- Team Block -->
+			<div class="row">
+				<div class="col s12 m4 offset-m2 wow slideInLeft" style="visibility: visible; animation-name: slideInLeft;">
+					<div class="center">
+						<a href="#">
+							<img class="circle" src="/belezadourada/public/img/equipe2.jpg">
+						</a>
+					</div>
+					<h5 class="center">
+						Lucineia Marinho
+					</h5>
+					<p class="center position">Cabelereira</p>
+					<p class="center btn-social">
+						<a href="" class="" data-position="bottom" data-delay="50">
+							<i class="fa fa-facebook"></i>
+						</a>
+						<a href="" class="" data-position="bottom" data-delay="50">
+							<i class="fa fa-twitter"></i>
+						</a>
+						<a href="" class="" data-position="bottom" data-delay="50">
+							<i class="fa fa-instagram"></i>
+						</a>
+					</p>
+				</div>
+
+				<div class="col s12 m4 wow zoomIn" style="visibility: visible; animation-name: slideInRight;">
+					<div class="center">
+						<a href="#">
+							<img class="circle" src="/belezadourada/public/img/equipe4.jpg">
+						</a>
+					</div>
+					<h5 class="center">Luciane Marinho</h5>
+					<p class="center position">Maquiadora</p>
+					<p class="center btn-social">
+						<a href="" class="" data-position="bottom" data-delay="50">
+							<i class="fa fa-facebook"></i>
+						</a>
+						<a href="" class="" data-position="bottom" data-delay="50">
+							<i class="fa fa-twitter"></i>
+						</a>
+						<a href="" class="" data-position="bottom" data-delay="50">
+							<i class="fa fa-instagram"></i>
+						</a>
+					</p>
+				</div>
+			</div>
+			<!--/ Team Block -->
+
+		</div>
+	</div>
+	<!--/ Our Team Section -->
+
+	<!-- Last Posts Section -->
+	<div class="section z-depth-1" id="last_posts">
+		<div class="container">
+			<h4 class="center">Depoimentos</h4>
+			<p class="center">Lorem ipsum dolor sit amet, consecteturadi <br> piscing elit, sed do eiusmod tempor</p>
+			<div class="post-list">
+				<div class="row">
+					<div class="col s12 m4 post wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+						<div class="col s4 m4 post-img">
+							<a href="http://materiable.toriom.com/single-post-sidebar.html">
+								<img src="/belezadourada/public/img/01.jpg" class="responsive-img">
+							</a>
+						</div>
+						<h6>
+							<a href="http://materiable.toriom.com/single-post-sidebar.html">What is Material?</a>
+						</h6>
+						<p>February 29, 2016</p>
+					</div>
+				</div>
+				<div class="center">
+					<a href="http://materiable.toriom.com/blog-left-sidebar.html" class="waves-effect waves-light btn blue">See More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/ Last Posts Section -->
+
+	<!-- Contacts Section -->
+	<div class="section z-depth-1" id="contact">
+		<div class="container">
+			<div class="contact-block">
+				<div class="row">
+					<div class="col s12 m6">
+						<h5>Send Message</h5>
+						<form class="row send-message">
+							<div class="input-field col s12">
+								<i class="mdi-social-person prefix"></i>
+								<input id="icon_prefix" type="text" class="validate" name="your_name">
+								<label for="icon_prefix">Your Name</label>
+							</div>
+							<div class="input-field col s12">
+								<i class="mdi-content-mail prefix"></i>
+								<input id="icon_email" type="email" class="validate" name="your_email">
+								<label for="icon_email">Your Email</label>
+							</div>
+							<div class="input-field col s12">
+								<i class="mdi-social-people prefix"></i>
+								<input id="icon_job" type="text" name="your_job">
+								<label for="icon_job">Your Job</label>
+							</div>
+							<div class="input-field col s12">
+								<i class="mdi-editor-mode-edit prefix"></i>
+								<textarea id="icon_message" class="validate materialize-textarea" name="your_message"></textarea>
+								<label for="icon_message">Your message</label>
+							</div>
+							<div class="right">
+								<button type="reset" class="btn waves-effect grey lighten-5 blue-text">Clear</button>
+								<button type="submit" class="waves-effect waves-light btn blue">Send<i class="mdi-content-send right blue-text"></i></button> 
+							</div>
+						</form>
+					</div>
+					<div class="col s12 m5 offset-m1">
+						<h5>Follow us</h5>
+						<div class="follow-btn">
+							<div class="col m8">
+								<a href="http://materiable.toriom.com/#!" title=""><i class="fa fa-facebook"></i></a>
+								<a href="http://materiable.toriom.com/#!" title=""><i class="fa fa-twitter"></i></a>
+								<a href="http://materiable.toriom.com/#!" title=""><i class="fa fa-linkedin"></i></a>
+								<a href="http://materiable.toriom.com/#!" title=""><i class="fa fa-dribbble"></i></a>
+								<a href="http://materiable.toriom.com/#!" title=""><i class="fa fa-behance"></i></a>
+								<a href="http://materiable.toriom.com/#!" title=""><i class="fa fa-instagram"></i></a>
+								<a href="http://materiable.toriom.com/#!" title=""><i class="fa fa-google-plus"></i></a>
+								<a href="http://materiable.toriom.com/#!" title=""><i class="fa fa-youtube"></i></a>
+							</div>
+						</div>
+						<div class="col m12 contact-info">
+							<h5>Our Address</h5>
+							<p>We Are From Art land: Istanbul - Turkey <br>Avcilar Markez Mah. NO.53 D.61 </p>
+							<p>+90 536 910 0000 <br>+90 536 910 0000<br></p>
+							<p>Info@yourdomain.com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/ contacts Section -->
+
+	<!-- Footer -->
+	<footer class="page-footer z-depth-1 grey darken-3">
+		<div class="container">
+		</div>
+	</footer>
+	<!--/ Footer -->
+
+	<!-- Jquery Lib -->
+	<script src="/belezadourada/public/js/jquery/dist/jquery.min.js"></script>
+
+	<!-- Jquery Easing -->
+	<script src="/belezadourada/public/js/jquery.easing.1.3.js"></script>
+
+	<!-- Jquery Appear -->
+	<script src="/belezadourada/public/js/jquery.appear.js"></script>
+
+	<!-- Materialize Lib -->
+	<script src="/belezadourada/public/js/materialize.js"></script>
+
+	<!-- Fotorama -->
+	<script src="/belezadourada/public/js/fotorama.js"></script>
+
+	<!-- Swiper Slider -->
+	<script src="/belezadourada/public/js/swiper.min.js"></script>
+	<script src="/belezadourada/public/js/swiper.jquery.min.js"></script>
+
+	<!-- Fancybox -->
+	<script src="/belezadourada/public/js/jquery.fancybox.js"></script>
+
+	<!-- Lazyload -->
+	<script src="/belezadourada/public/js/jquery.lazyload.js"></script>
+
+	<!-- WOW -->
+	<script src="/belezadourada/public/js/wow.min.js"></script>
+
+	<!-- Counter --> 
+	<script src="/belezadourada/public/js/jquery.countTo.js"></script>
+
+	<!-- Countdown -->
+	<script src="/belezadourada/public/js/jquery.countdown.min.js"></script>
+
+	<!-- Masonry Lib -->
+	<script src="/belezadourada/public/js/isotope.pkgd.min.js"></script>
+
+	<!-- Images Loaded -->
+	<script src="/belezadourada/public/js/imagesloaded.pkgd.min.js"></script>
+
+	<!-- Pie Chart -->
+	<script src="/belezadourada/public/js/jquery.easypiechart.min.js"></script>
+
+	<!-- Google Maps -->
+	<script src="/belezadourada/public/js/js"></script>
+	<script src="/belezadourada/public/js/map.initialize.js"></script>
+
+	<!-- Custom JS -->
+	<script src="/belezadourada/public/js/custom.js"></script>
+</body>
+</html>

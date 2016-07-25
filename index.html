@@ -48,7 +48,7 @@
 	<div class="overlay">
 		<div class="col s12 m12 center">
 			<div class="preloader-wrapper big active">
-				<div class="spinner-layer spinner-pink-only">
+				<div class="spinner-layer spinner-turquoise-only">
 					<div class="circle-clipper left">
 						<div class="circle"></div>
 					</div>
@@ -68,7 +68,7 @@
 		<!-- Navbar Container -->
 		<div class="navbar-fixed">
 			<!-- nav -->
-			<nav class="" style="background-color:#A8DCD1">
+			<nav class="">
 				<div class="container">
 					<div class="nav-wrapper">
 						<a href="/hm-belezadourada" class="brand-logo">
@@ -99,17 +99,12 @@
 						</ul>
 						<!-- Small Screen Side Nav -->
 						<ul id="mobile-nav" class="side-nav">
-							<li><a class="active" href="">Home</a></li>
-							<li class="divider"></li>
-							<li><a href="">Serviços</a></li>
-							<li class="divider"></li>
-							<li><a href="">Portfólio</a></li>
-							<li class="divider"></li>
-							<li><a href="">Equipe</a></li>
-							<li class="divider"></li>
-							<li><a href="">Espaço</a></li>
-							<li class="divider"></li>
-							<li><a href="">Contato</a></li>
+							<li><a class="active" href="javascript:void(0)" onclick="$('html, body').animate({scrollTop:0}, 'slow')">Home</a></li>
+							<li><a href="javascript:void(0)" onclick="scrollCustom('services')">Serviços</a></li>
+							<li><a href="javascript:void(0)" onclick="scrollCustom('last_portfolio')">Portfólio</a></li>
+							<li><a href="javascript:void(0)" onclick="scrollCustom('team')">Equipe</a></li>
+							<li><a href="javascript:void(0)" onclick="scrollCustom('espaco')">Espaço</a></li>
+							<li><a href="javascript:void(0)" onclick="scrollCustom('contact')">Contato</a></li>
 						</ul>
 						<!--/ Small Screen Side Nav -->
 					</div>
@@ -210,24 +205,24 @@
 			<p class="center grey-text text-lighten-1">Lorem ipsum dolor sit amet, consecteturadi <br> piscing elit, sed do eiusmod tempor</p>
 			<!-- Filters -->
 			<div class="row">
-				<div class="col s8 offset-s2 ">
+				<div class="col s12 m8 offset-m2">
 					<ul class="tabs" id="filters" style="width: 100%;">
-						<li class="tab col s3">
+						<li class="tab col s1 m3">
 							<a class="grey-text text-lighten-1 active" href="javascript:void(0)" data-filter="*">Tudo</a>
 						</li>
-						<li class="tab col s3">
+						<li class="tab col s1 m3">
 							<a class="grey-text text-lighten-1" href="javascript:void(0)" data-filter=".pf-eventos">Eventos</a>
 						</li>
-						<li class="tab col s3">
+						<li class="tab col s1 m3">
 							<a class="grey-text text-lighten-1" href="javascript:void(0)" data-filter=".pf-maquiagem">Maquiagem</a>
 						</li>
-						<li class="tab col s3">
+						<li class="tab col s1 m3">
 							<a class="grey-text text-lighten-1" href="javascript:void(0)" data-filter=".pf-penteados">Penteados</a>
 						</li>
-						<li class="tab col s3">
+						<li class="tab col s1 m3">
 							<a class="grey-text text-lighten-1" href="javascript:void(0)" data-filter=".pf-cursos">Cursos</a>
 						</li>
-						<div class="indicator" style="right: 635px; left: 0px;"></div>
+						<div class="indicator"></div>
 					</ul>
 				</div>
 			</div>
@@ -424,10 +419,10 @@
 					</h5>
 					<p class="center position">Cabelereira</p>
 					<p class="center btn-social">
-						<a href="" data-position="bottom" data-delay="50">
+						<a href="https://www.facebook.com/lucineia.alves.31521" data-position="bottom" data-delay="50">
 							<i class="fa fa-facebook"></i>
 						</a>
-						<a href="" data-position="bottom" data-delay="50">
+						<a href="https://www.instagram.com/penteadoslucineiamarinho/" data-position="bottom" data-delay="50">
 							<i class="fa fa-instagram"></i>
 						</a>
 					</p>
@@ -440,7 +435,7 @@
 					<h5 class="center">Luciane Marinho</h5>
 					<p class="center position">Maquiadora</p>
 					<p class="center btn-social">
-						<a href="" data-position="bottom" data-delay="50">
+						<a href="https://www.facebook.com/profile.php?id=100004575675961" data-position="bottom" data-delay="50">
 							<i class="fa fa-facebook"></i>
 						</a>
 						<a href="https://www.instagram.com/lucianemarinhomakeup/" data-position="bottom" data-delay="50">
@@ -507,8 +502,8 @@
 								<label for="mensagem">Your message</label>
 							</div>
 							<div class="right">
-								<button type="reset" class="btn waves-effect grey lighten-5 blue-text">Limpar</button>
-								<button type="submit" class="waves-effect waves-light btn blue">Enviar<i class="fa fa-send right blue-text"></i></button> 
+								<button type="reset" class="btn waves-effect lighten-5">Limpar</button>
+								<button type="submit" class="waves-effect waves-light btn">Enviar<i class="fa fa-send right blue-text"></i></button> 
 							</div>
 						</form>
 					</div>
@@ -522,16 +517,16 @@
 	<footer class="page-footer z-depth-1">
 		<div class="container">
 			<div class="row">
-				<div class="col l6 s12">
+				<div class="col l6 m6 s12">
 					<h5 class="white-text">Beleza Dourada</h5>
 					<p class="grey-text text-lighten-4">Rua Octávio Perioto, 141 <br> Maringá, PR</p>
 					<p class="grey-text text-lighten-4">(44) 3255-6381 • (44) 9912-3828</p>
 				</div>
-				<div class="col l4 offset-l2 s12">
+				<div class="col l4 m6 offset-l2 s12">
 					<h5 class="white-text">Redes Sociais</h5>
 					<ul>
-						<li><a class="grey-text text-lighten-3" href="#!"><i class="fa fa-facebook"></i></a></li>
-						<li><a class="grey-text text-lighten-3" href="#!"><i class="fa fa-instagram"></i></a></li>
+						<li><a class="grey-text text-lighten-3" href="https://www.facebook.com/Belezadouradalucineia/"><i class="fa fa-facebook"></i></a></li>
+						<li><a class="grey-text text-lighten-3" href="https://www.instagram.com/belezaaadourada/"><i class="fa fa-instagram"></i></a></li>
 					</ul>
 				</div>
 			</div>

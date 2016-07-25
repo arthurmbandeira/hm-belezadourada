@@ -12,20 +12,6 @@ h1, h2, h3, h4, h5, h6{
 .opensans{
 	font-family: 'Open Sans', sans-serif;
 }
-.titulo-section{
-	/*text-transform: uppercase;*/
-}
-#services .item-servicos{
-	width: 20%;
-	margin: 0 2.5%;
-}
-#services .item-servicos:hover{
-	transform: scale(1.1);
-
-}
-#team img{
-	max-height: 150px;
-}
 .transition-padrao{
 	-webkit-transition:all 0.3s ease;
 	-moz-transition:all 0.3s ease;
@@ -37,6 +23,73 @@ h1, h2, h3, h4, h5, h6{
 	-moz-transition:all 0.3s ease;
 	-o-transition:all 0.3s ease;
 	transition:all 0.3s ease;
+}
+.overlay{
+	background-color: #7C7C7C;
+}
+.overlay .spinner-turquoise-only{
+	border-color: #52DEE5;
+}
+/*HEADER*/
+header nav{
+	background-color: #7C7C7C;
+}
+header nav ul li a{
+	color: #EEE5E9;
+	border-color: #52DEE5;
+}
+header nav ul li.active a,
+header nav ul li:hover a{
+	border-bottom: 2px #52DEE5 solid;
+}
+/*SERVIÇOS*/
+#services{
+	background-color: #EEE5E9;
+}
+#services *{
+	color: #383D3B !important;
+}
+#services .item-servicos{
+	width: 20%;
+	margin: 0 2.5%;
+}
+#services .item-servicos:hover{
+	transform: scale(1.1);
+}
+/*PORTFÓLIO*/
+#last_portfolio{
+	background-color: #383D3B;
+}
+#last_portfolio *{
+	color: #EEE5E9 !important;
+}
+#last_portfolio .tabs .indicator{
+	color: #52DEE5;
+	background-color: #52DEE5;
+}
+#last_portfolio .portfolio .items-list .item .caption{
+	background-color: rgba(146,220,229,0.65);
+}
+#last_portfolio .portfolio .items-list .item .caption a.zoon-in:hover{
+	color: #52DEE5;
+	border-color: #52DEE5;
+}
+/*EQUIPE*/
+#team{
+	background-color: #EEE5E9;
+}
+#team *{
+	color: #383D3B !important;
+}
+#team img{
+	max-height: 150px;
+}
+/*ESPAÇO*/
+#espaco{
+	background-color: #383D3B;
+}
+#espaco *{
+	color: #EEE5E9 !important;
 }
 #espaco .carousel{
 	height: 500px;
@@ -50,11 +103,32 @@ h1, h2, h3, h4, h5, h6{
 #espaco .carousel .carousel-item .fancybox img{
 	width: 100%;
 }
+/*CONTATO*/
 #contact{
+	background-color: #EEE5E9;
 	padding: 50px 0;
 }
+#contact .send-message .btn{
+	background-color: #EEE5E9;
+	color: #7C7C7C;
+}
+#contact .send-message .btn i:before{
+	color: #7C7C7C;
+}
+.input-field input[type="text"]:focus + label, .input-field input[type="password"]:focus + label, .input-field input[type="email"]:focus + label, .input-field input[type="url"]:focus + label, .input-field input[type="date"]:focus + label, .input-field input[type="tel"]:focus + label, .input-field input[type="number"]:focus + label, .input-field input[type="search"]:focus + label, .input-field textarea.materialize-textarea:focus + label{
+	color: #52DEE5;
+}
+input:focus:not([type]):not([readonly]), input[type="text"]:focus:not([readonly]), input[type="password"]:focus:not([readonly]), input[type="email"]:focus:not([readonly]), input[type="url"]:focus:not([readonly]), input[type="time"]:focus:not([readonly]), input[type="date"]:focus:not([readonly]), input[type="datetime-local"]:focus:not([readonly]), input[type="tel"]:focus:not([readonly]), input[type="number"]:focus:not([readonly]), input[type="search"]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
+	border-bottom: 1px solid #52DEE5;
+	box-shadow: 0 1px 0 0 #52DEE5;
+}
+/*FOOTER*/
 footer.page-footer{
 	padding-top: 1rem;
+	background-color: #7C7C7C;
+}
+footer.page-footer *{
+	color: #EEE5E9 !important;
 }
 footer ul{
 	display: inline-flex;
@@ -64,4 +138,59 @@ footer ul li{
 }
 footer ul li:first-of-type{
 	margin-left: 0;
+}
+footer.page-footer .footer-copyright{
+	background-color: #383D3B;
+}
+@media (min-width: 768px) and (max-width: 991px){
+	#last_portfolio .row .col.s12.m8{
+		width: 100%;
+		margin-left: 0;
+	}
+	#mobile-nav{
+		background-color: #7C7C7C;
+	}
+	.side-nav a{
+		color: #EEE5E9;
+	}
+	.side-nav a.active, .side-nav a.active:hover{
+		background-color: #EEE5E9;
+		color: #92DCE5;
+	}
+}
+@media (max-width: 767px){
+	#mobile-nav{
+		background-color: #7C7C7C;
+	}
+	.side-nav a{
+		color: #EEE5E9;
+	}
+	.side-nav a.active, .side-nav a.active:hover{
+		background-color: #EEE5E9;
+		color: #92DCE5;
+	}
+	#services .item-servicos{
+		width: 40%;
+		margin: 0 5%;
+		padding-top: 10px;
+	}
+	#espaco .carousel{
+		height: 350px;
+	}
+	#espaco .carousel .carousel-item{
+		width: 250px;
+	}
+	#last_portfolio .row .col.s12{
+		padding: 0;
+	}
+	#last_portfolio .tabs .tab{
+		min-width: 0;
+		width: auto;
+	}
+	#contact .contact-block{
+		padding: 35px 15px 20px;
+	}
+	#contact .input-field{
+		padding-left: 0;
+	}
 }
